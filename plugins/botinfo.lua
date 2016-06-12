@@ -8,9 +8,8 @@ a Persian bot for Iranian 🇮🇷
 
 Sudo : @MasTerPoKeR
 
-Bot id : https://telegram.me/avirabot
+Bot id : https://telegram.me/dimon_tg
 
-http://s7.picofile.com/file/8246000950/Avira.jpg
 ]]
     return text
   end
