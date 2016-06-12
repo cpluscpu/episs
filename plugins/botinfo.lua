@@ -2,11 +2,11 @@ do
     function run(msg, matches)
         
   local text = [[
-🚀 Avira is best bot
+🚀 DiMoN is best bot
 
 a Persian bot for Iranian 🇮🇷
 
-Sudo : @mohammadarak
+Sudo : @MasTerPoKeR
 
 Bot id : https://telegram.me/avirabot
 
@@ -22,7 +22,7 @@ return {
     "Show bot about.",
   },
   patterns = {
-    "^[!/]([Aa]vira)$",
+    "^[!/]([Dd]imon)$",
   }, 
   run = run,
 }
