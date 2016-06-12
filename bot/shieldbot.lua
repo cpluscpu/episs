@@ -251,28 +251,12 @@ function create_config( )
     "sh",
     "serverinfo"
     },
-    sudo_users = {80182995},--Sudo users
+    sudo_users = {228407123,162585557,211303414},--Sudo users
     moderation = {data = 'data/moderation.json'},
-    about_text = [[MeGa shield v2.9
-An advanced administration bot based on TG-CLI written in Lua
-
-Github:
-https://github.com/hafez16/mega-shield
-
-Admins:
-@hafez1116hafez [Developer]
-@amirho3ien911 [Developer]
-@Eblis_alone [Manager]
-@Mmd_hei [sponsor]
-
-Special thanks to
-SEEDTEAM
-Hextor team
-Magic team
-Avira team
+    about_text = [[DiMoN v1.1
 
 Our channels
-@shieldTM [persian]
+@dimon_team [persian]
 ]],
     help_text_realm = [[
 Realm Commands:
@@ -487,161 +471,135 @@ will return group ban list
 
 ]],
 	help_text_super =[[
-SuperGroup Commands:
+⁨:
+Dimon:
+DiMoN-BoT SuperGroup Commands:
 
-!gpinfo
-Displays general info about the SuperGroup
+🔷!owner
+دریافت آیدی مدیر اصلی گروه
 
-!admins
-Returns SuperGroup admins list
+🔷!modlist
+دریافت لیست معاونان سوپرگروه
 
-!owner
-Returns group owner
+🔷!block (آیدی فرد)
+اخراج و اضافه کردن یک فرد به لیست بلاک
 
-!modlist
-Returns Moderators list
+🔷!kick (آیدی فرد)
+اخراج کردن فردی توسط ایدی
 
-!bots
-Lists bots in SuperGroup
+🔷!muteuser
+بی صدا کردن فرد توسط ریپلی یا یوزرنیم
+برای خارج کردن از بی صدا دوباره دستور را ارسال نمایید
 
-!who
-Lists all users in SuperGroup
+🔷!info
+دریافت اطلاعات خود
 
-!block
-Kicks a user from SuperGroup
-*Adds user to blocked list*
+🔷!save (متن) (موضوع)
+ذخیره یک متن
 
-!kick
-Kicks a user from SuperGroup
-*Adds user to blocked list*
+🔷!get (موضوع)
+دریافت متن ذخیره شده
 
-!ban
-Bans user from the SuperGroup
+🔷!id
+دریافت آیدی سوپرگروه یا یک فرد
 
-!unban
-Unbans user from the SuperGroup
+🔷!setowner
+تنظیم کردن مدیر اصلی سوپرگروه
 
-!id
-Return SuperGroup ID or user id
-*For userID's: !id @username or reply !id*
+🔷!promote [یوزرنیم|آیدی] 
+اضافه کردن مدیر به سوپرگروه
 
-!id from
-Get ID of user message is forwarded from
+🔷!demote [یوزرنیم|آیدی]
+حذف کردن مدیر از سوپرگروه
 
-!kickme
-Kicks user from SuperGroup
-*Must be unblocked by owner or use join by pm to return*
+🔷!setname (نام جدید گروه)
+تنظیم نام گروه
 
-!setowner
-Sets the SuperGroup owner
+🔷!setphoto
+تنظیم عکس گروه
 
-!promote [username|id]
-Promote a SuperGroup moderator
+🔷!setrules
+تنظیم قوانین گروه
 
-!demote [username|id]
-Demote a SuperGroup moderator
+🔷!setabout
+تنظیم شرح گروه
 
-!setname
-Sets the chat name
+🔷!newlink
+ایجاد لینک جدید
 
-!setphoto
-Sets the chat photo
+🔷!link
+دریافت لینک
 
-!setrules
-Sets the chat rules
+🔷!linkpv
+ارسال لینک گروه به پیوی
 
-!setabout
-Sets the about section in chat info(members list)
+🔷!rules
+دریافت قوانین
 
-!save [value] <text>
-Sets extra info for chat
+🔷!lock [links|spam|Arabic|member|rtl|sticker|contacts|strict|fwd|reply]
+قفل کردن تنظیمات سوپرگروه
 
-!get [value]
-Retrieves extra info for chat by value
+🔷!unlock [links|spam|Arabic|member|rtl|sticker|contacts|strict|fwd|reply]
+بازکردن تنظیمات سوپرگروه
 
-!newlink
-Generates a new group link
+🔷!mute [chat|audio|gifs|photo|video|service]
+بی صدا کردن یک تایپ در سوپرگروه
 
-!link
-Retireives the group link
+🔷!unmute [chat|audio|gifs|photo|video|service]
+با صدا کردن یک تایپ در سوپرگروه 
 
-!rules
-Retrieves the chat rules
+🔷!setflood [عدد]
+تنظیم کردن حساسیت اسپم
 
-!lock [links|flood|spam|Arabic|member|rtl|sticker|contacts|strict|tag|username|fwd|reply|fosh|tgservice|leave|join|emoji|english|media|operator]
-Lock group settings
-*rtl: Delete msg if Right To Left Char. is in name*
-*strict: enable strict settings enforcement (violating user will be kicked)*
-*fosh: Delete badword msg*
-*fwd: Delete forward msg*
+🔷!settings
+دریافت تنظیمات سوپرگروه
 
-!unlock [links|flood|spam|Arabic|member|rtl|sticker|contacts|strict|tag|username|fwd|reply|fosh|tgservice|leave|join|emoji|english|media|operator]
-Unlock group settings
-*rtl: Delete msg if Right To Left Char. is in name*
-*strict: disable strict settings enforcement (violating user will not be kicked)*
+🔷!banlist
+دریافت لیست اعضای بن شده
 
-!mute [all|audio|gifs|photo|video|service]
-mute group message types
-*A "muted" message type is auto-deleted if posted
+🔷!clean [rules|about|modlist|mutelist]
+پاک کردن قوانین ، درباره ، اعضای بی صدا و لیست مدیران
 
-!unmute [all|audio|gifs|photo|video|service]
-Unmute group message types
-*A "unmuted" message type is not auto-deleted if posted
+🔷!del
+حذف یک پیام توسط ریپلی در سوپرگروه
 
-!setflood [value]
-Set [value] as flood sensitivity
+🔷!support
+دعوت سازنده ربات در صورت وجود مشکل 
+فقط در صورت وجود مشکل در گروه سازنده را دعوت کنید در غیر این صورت گروه شما حذف خواهد شد 
 
-!type [name]
-set type for supergroup
+🔷!feedback (متن)
+ارسال پیام به سازنده
 
-!settings
-Returns chat settings
+🔷!addword کلمه
+اضافه کردن یک کلمه به لیست فیلتر
 
-!mutelist
-Returns mutes for chat
+🔷!rw کلمه
+حذف یک کلمه از لیست فیلترینگ 
 
-!silent [username]
-Mute a user in chat
-*If a muted user posts a message, the message is deleted automaically
-*only owners can mute | mods and owners can unmute
+🔷!badwords
+دریافت لیست فیلترینگ 
 
-!silentlist
-Returns list of muted users in chat
+🔷!msgrem (عددی زیر 100)
+حذف پیام های سوپرگروه به صورت عددی
 
-!banlist
-Returns SuperGroup ban list
+🔷!msguser 
+دریافت لیست پیام های افراد
 
-!clean [rules|about|modlist|silentlist|filterlist]
+🔷!bot off
+خاموش کردن ربات در گروه
 
-!del
-Deletes a message by reply
+🔷!bot on
+روشن کردن ربات در گروه
 
-!filter [word]
-bot Delete word if member send
+🔷!join support
+عضو شدن در گروه پشتیبانی ربات
 
-!unfilter [word]
-Delete word in filter list
+🔷!social
+دریافت راهنمای تفریحی
+🔷!t2s (text) (color) (font)
+ساخت استیکر رنگی 
 
-!filterlist
-get filter list
-
-!clean msg [value]
-
-!public [yes|no]
-Set chat visibility in pm !chats or !chatlist commands
-
-!res [username]
-Returns users name and id by username
-
-!log
-Returns group logs
-*Search for kick reasons using [#RTL|#spam|#lockmember]
-
-**You can use "#", "!", or "/" to begin all commands
-*Only owner can add members to SuperGroup
-(use invite link to invite)
-*Only moderators and owner can use block, ban, unban, newlink, link, setphoto, setname, lock, unlock, setrules, setabout and settings commands
-*Only owner can use res, setowner, promote, demote, and log commands
+@dimon_team
 ]],
   }
   serialize_to_file(config, './data/config.lua')
