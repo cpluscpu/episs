@@ -70,7 +70,7 @@ function run(msg, matches)
 	  text = text..'\nغروب آفتاب: '..data.Sunset
 	  text = text..'\nاذان مغرب: '..data.Maghrib
 	  text = text..'\nعشاء : '..data.Isha
-	  text = text..'\n\nFire'
+	  text = text..'\n\🔷 @dimon_team'
 	if string.match(text, '0') then text = string.gsub(text, '0', '۰') end
 	if string.match(text, '1') then text = string.gsub(text, '1', '۱') end
 	if string.match(text, '2') then text = string.gsub(text, '2', '۲') end
