@@ -10,8 +10,8 @@ function run(msg, matches)
         return "اول باید لینک جدید ایجاد کنید"
        end
          local text = "لینک گروه:\n"..group_link
-          send_large_msg('user#id'..msg.from.id, text, ok_cb, false)
-           return "لینک به pv ارسال شد"
+          send_large_msg('user#id'..msg.from.id, text.."\n", ok_cb, false)
+           return "لینک به پیوی شما ارسال شد"
 end
 
 return {
