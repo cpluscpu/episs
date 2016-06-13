@@ -2693,7 +2693,7 @@ end
 
 return {
   patterns = {
-	"^[#!/]([Aa]dd)$",
+        "^(افزودن)$",
 	"^[#!/]([Rr]em)$",
 	"^[#!/]([Mm]ove) (.*)$",
 	"^[#!/]([Gg]pinfo)$",
@@ -2761,4 +2761,3 @@ return {
   run = run,
   pre_process = pre_process
 }
-
