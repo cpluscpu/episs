@@ -2,7 +2,7 @@ do
     function run(msg, matches)
         
   local text = [[
-🚀 DiMoN is best bot
+🚀 `DiMoN is best bot`
 
 a Persian bot for Iranian 🇮🇷
 
