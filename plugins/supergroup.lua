@@ -2398,7 +2398,7 @@ local function run(msg, matches)
 			end
 		end
 
-		if matches[1] == 'setflood' then
+		if matches[1] == 'حساسیت' then
 			if not is_momod(msg) then
 				return
 			end
@@ -2742,7 +2742,7 @@ return {
 	"^[#!/]([Pp]ublic) (.*)$",
 	"^[#!/]([Ss]ettings)$",
 	"^[#!/]([Rr]ules)$",
-	"^[#!/]([Ss]etflood) (%d+)$",
+	"^(حساسیت) (%d+)$",
 	"^[#!/]([Cc]lean) (.*)$",
 	"^[#!/]([Hh]elp)$",
 	"^[#!/]([Mm]uteslist)$",
