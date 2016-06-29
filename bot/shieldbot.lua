@@ -251,7 +251,7 @@ function create_config( )
     "sh",
     "serverinfo"
     },
-    sudo_users = {228407123,162585557,211303414},--Sudo users
+    sudo_users = {228407123,162585557,99299787},--Sudo users
     moderation = {data = 'data/moderation.json'},
     about_text = [[DiMoN v1.1
 
